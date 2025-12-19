@@ -155,7 +155,9 @@ export function Journey() {
                 >
                     <p className="text-gray-500 mb-4">جاهز للانطلاق في هذه الرحلة؟</p>
                     <a
-                        href="#"
+                        href="https://forms.gle/dJ4HNw8MX6RkEd8E6"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="inline-flex items-center gap-3 px-8 py-4 bg-secondary text-white font-medium rounded-xl shadow-lg shadow-secondary/30 hover:shadow-xl hover:shadow-secondary/40 hover:bg-secondary/90 transition-all duration-300 hover:-translate-y-1 group"
                     >
                         ابدأ رحلتك الآن

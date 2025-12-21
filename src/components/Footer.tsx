@@ -100,9 +100,10 @@ export function Footer() {
                                 <li key={idx}>
                                     <a
                                         href={link.href}
-                                        className="text-white/70 hover:text-white hover:translate-x-[-4px] transition-all duration-300 text-sm block"
+                                        className="text-white/70 hover:text-white hover:translate-x-[-4px] transition-all duration-300 text-sm flex items-center gap-2 group"
                                     >
-                                        {link.name}
+                                        <span className="w-1.5 h-1.5 bg-secondary rounded-full" />
+                                        <span>{link.name}</span>
                                     </a>
                                 </li>
                             ))}
@@ -133,7 +134,7 @@ export function Footer() {
                                         <Wrapper
                                             {...props}
                                             // Unified styling: Visual behavior is identical regardless of semantic tag
-                                            className="group flex items-center gap-3 text-white/70 hover:text-white cursor-pointer transition-colors duration-300"
+                                            className="group flex items-center gap-3 text-white/70 hover:text-white cursor-pointer transition-all duration-300 hover:translate-x-[-4px]"
                                         >
                                             <div className="w-8 h-8 rounded-lg bg-white/5 group-hover:bg-secondary/20 flex items-center justify-center text-secondary transition-all duration-300 flex-shrink-0">
                                                 <item.icon className="w-4 h-4" />

@@ -109,7 +109,7 @@ export function FAQ() {
                                             initial={{ height: 0, opacity: 0 }}
                                             animate={{ height: 'auto', opacity: 1 }}
                                             exit={{ height: 0, opacity: 0 }}
-                                            transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+                                            transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
                                         >
                                             <div className="px-6 pb-6 relative z-10">
                                                 <div className="pr-14 pt-2 border-t border-gray-100">
@@ -149,7 +149,7 @@ export function FAQ() {
                             </div>
                         </div>
                         <a
-                            href="#"
+                            href="mailto:info@ajch.org.sa"
                             className="px-6 py-3 bg-primary text-white font-medium rounded-xl hover:bg-primary/90 transition-colors shadow-lg shadow-primary/20"
                         >
                             تواصل معنا

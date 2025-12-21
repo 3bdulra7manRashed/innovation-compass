@@ -263,20 +263,21 @@ export function Hero() {
             </div>
 
             {/* Scroll Indicator */}
-            <motion.div
+            <motion.a
+                href="#about"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 1.5 }}
-                className="absolute bottom-4 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
+                className="absolute bottom-4 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 cursor-pointer z-30 group"
             >
-                <span className="text-sm text-gray-400">اكتشف المزيد</span>
+                <span className="text-sm text-gray-400 group-hover:text-secondary transition-colors duration-300">اكتشف المزيد</span>
                 <motion.div
                     animate={{ y: [0, 8, 0] }}
                     transition={{ duration: 1.5, repeat: Infinity }}
                 >
-                    <ChevronDown className="w-5 h-5 text-secondary" />
+                    <ChevronDown className="w-5 h-5 text-secondary group-hover:text-primary transition-colors duration-300" />
                 </motion.div>
-            </motion.div>
+            </motion.a>
         </section>
     )
 }

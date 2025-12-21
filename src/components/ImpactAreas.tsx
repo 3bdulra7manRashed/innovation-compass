@@ -28,7 +28,7 @@ export function ImpactAreas() {
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     animate={isInView ? { opacity: 1, y: 0 } : {}}
-                    transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+                    transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
                     className="text-center mb-16"
                 >
                     <motion.span
@@ -55,7 +55,7 @@ export function ImpactAreas() {
                             key={idx}
                             initial={{ opacity: 0, y: 30 }}
                             animate={isInView ? { opacity: 1, y: 0 } : {}}
-                            transition={{ delay: 0.1 + idx * 0.08, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+                            transition={{ delay: 0.1 + idx * 0.08, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
                             className="group relative"
                         >
                             <div className="relative bg-background hover:bg-white p-8 rounded-2xl border border-gray-100 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10 hover:-translate-y-2 overflow-hidden h-full">

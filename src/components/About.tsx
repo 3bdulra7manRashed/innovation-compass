@@ -32,7 +32,7 @@ export function About() {
                 <motion.div
                     initial={{ opacity: 0, x: 50 }}
                     animate={isInView ? { opacity: 1, x: 0 } : {}}
-                    transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+                    transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
                     className="space-y-5 md:space-y-6 text-center md:text-right"
                 >
                     {/* Badge */}
@@ -44,7 +44,7 @@ export function About() {
                     >
                         <motion.span
                             animate={{ scale: [1, 1.2, 1] }}
-                            transition={{ duration: 2, repeat: Infinity }}
+                            transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
                             className="w-2 h-2 rounded-full bg-accent"
                         />
                         <span className="text-sm font-medium text-[#1e1b4b]">عن بوصلة الابتكار</span>

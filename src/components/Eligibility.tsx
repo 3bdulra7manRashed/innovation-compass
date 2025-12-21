@@ -141,7 +141,7 @@ export function Eligibility() {
                                         variant="secondary"
                                         size="lg"
                                         className="w-full justify-between items-center group min-h-[64px] h-auto py-4 text-lg shadow-lg shadow-secondary/30"
-                                        onClick={() => window.open('https://drive.google.com/file/d/1WkxksNuvpkWYGe1m-ON7zi0btyfOA8NH/view?usp=sharing', '_blank')}
+                                        onClick={() => window.open('https://drive.google.com/file/d/1H8WR4F7a7Rv3s3GvXPpAVaEey8SZarCe/view?usp=sharing', '_blank')}
                                     >
                                         <div className="flex items-center gap-3">
                                             <FileText className="w-5 h-5 flex-shrink-0" />

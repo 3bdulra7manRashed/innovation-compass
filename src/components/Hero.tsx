@@ -197,15 +197,22 @@ export function Hero() {
                                     <div className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 w-3 h-3 bg-primary rounded-full shadow-lg" />
                                     <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 w-3 h-3 bg-secondary-accent rounded-full shadow-lg" />
                                 </motion.div>
-                                {/* Center Content */}
-                                <div className="absolute inset-0 flex flex-col items-center justify-center">
+                                {/* Center Content - Logo */}
+                                <div className="absolute inset-0 flex items-center justify-center">
                                     <motion.div
-                                        animate={{ scale: [1, 1.05, 1] }}
-                                        transition={{ duration: 3, repeat: Infinity }}
-                                        className="text-center"
+                                        animate={{ scale: [1, 1.03, 1] }}
+                                        transition={{
+                                            duration: 10,
+                                            repeat: Infinity,
+                                            ease: "easeInOut",
+                                        }}
+                                        className="w-32 h-32 flex items-center justify-center motion-reduce:animate-none"
                                     >
-                                        <span className="text-4xl font-bold text-primary block mb-1">بوصلة</span>
-                                        <span className="text-2xl font-bold gradient-text">الابتكار</span>
+                                        <img
+                                            src="/Logo/Innovation-compass-logo.png"
+                                            alt="بوصلة الابتكار"
+                                            className="w-full h-full object-contain drop-shadow-lg"
+                                        />
                                     </motion.div>
                                 </div>
                             </div>

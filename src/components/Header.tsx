@@ -87,11 +87,11 @@ export function Header() {
                     aria-label="بوصلة الابتكار - الصفحة الرئيسية"
                 >
                     <Image
-                        src="/InnovationLogo.png"
+                        src="/Logo/Innovation-compass-logo.png"
                         alt="شعار بوصلة الابتكار"
-                        width={180}
-                        height={56}
-                        className="h-12 md:h-14 w-auto object-contain"
+                        width={200}
+                        height={64}
+                        className="h-14 md:h-16 w-auto object-contain"
                         priority
                     />
                 </a>

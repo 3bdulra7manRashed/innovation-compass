@@ -1,11 +1,11 @@
 'use client'
 import { motion } from 'framer-motion'
 import { Button } from './Button'
-import { ArrowLeft, Download, Sparkles, Zap, Target, ChevronDown } from 'lucide-react'
+import { ArrowLeft, Download, Sparkles, Zap, Target, ChevronDown, Calendar } from 'lucide-react'
 
 export function Hero() {
     return (
-        <section id="hero" className="relative min-h-screen flex items-center justify-center pt-20 pb-8 overflow-hidden bg-gradient-to-b from-background via-background to-white">
+        <section id="hero" className="relative min-h-screen flex items-center justify-center pt-24 md:pt-20 pb-12 md:pb-8 overflow-hidden bg-gradient-to-b from-background via-background to-white">
             {/* Animated Background Elements */}
             <div className="absolute inset-0 z-0 overflow-hidden">
                 {/* Gradient Orbs */}
@@ -68,7 +68,7 @@ export function Hero() {
                     className="text-right"
                 >
                     {/* Main Heading */}
-                    <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-primary leading-tight mb-4 text-shadow-sm">
+                    <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-primary leading-tight mb-5 md:mb-4 text-shadow-sm">
                         فرصة للجهات المتخصصة في مجال{' '}
                         <span className="relative inline-block">
                             <span className="gradient-text">الطفولة والشباب</span>
@@ -96,9 +96,9 @@ export function Hero() {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.5, duration: 0.6 }}
-                        className="text-base md:text-lg text-gray-600 mb-6 leading-relaxed max-w-2xl"
+                        className="text-[1.0625rem] md:text-lg text-gray-600 mb-5 md:mb-6 leading-7 md:leading-relaxed max-w-2xl"
                     >
-                        للشراكة في ابتكار مبادرات نوعية ضمن مبادرة بوصلة الابتكار، لتمكين الجمعيات من صناعة الأثر المستدام وبناء حلول مبتكرة.
+                        للشراكة في ابتكار مبادرات نوعية ضمن مبادرة بوصلة الابتكار، لتمكين الجهات من صناعة الأثر المستدام وبناء حلول مبتكرة.
                     </motion.p>
 
                     {/* CTA Buttons */}
@@ -106,12 +106,12 @@ export function Hero() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.7, duration: 0.6 }}
-                        className="flex flex-wrap gap-3"
+                        className="flex flex-col sm:flex-row flex-wrap gap-3"
                     >
                         <Button
                             size="lg"
                             variant="primary"
-                            className="gap-3 shadow-2xl shadow-primary/30 hover:shadow-primary/40 group btn-ripple shine-effect"
+                            className="w-full sm:w-auto gap-3 shadow-2xl shadow-primary/30 hover:shadow-primary/40 group btn-ripple shine-effect"
                             onClick={() => window.open('https://forms.gle/dJ4HNw8MX6RkEd8E6', '_blank')}
                         >
                             الاشتراك في المبادرة
@@ -120,10 +120,11 @@ export function Hero() {
                         <Button
                             size="lg"
                             variant="outline"
-                            className="gap-3 hover:border-secondary hover:text-secondary group"
+                            className="w-full sm:w-auto gap-3 hover:border-secondary hover:text-secondary group"
+                            onClick={() => window.open('https://forms.gle/ZPztq9DvitrEXgnp8', '_blank')}
                         >
-                            <Download className="w-5 h-5 group-hover:animate-bounce" />
-                            تحميل العرض التعريفي
+                            <Calendar className="w-5 h-5 group-hover:animate-bounce" />
+                            التسجيل في اللقاء التعريفي
                         </Button>
                     </motion.div>
 
@@ -132,23 +133,23 @@ export function Hero() {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: 1, duration: 0.6 }}
-                        className="flex gap-6 mt-4 pt-3 border-t border-gray-200/60"
+                        className="flex justify-center sm:justify-start gap-5 sm:gap-6 mt-6 sm:mt-4 pt-4 sm:pt-3 border-t border-gray-200/60"
                     >
                         {[
                             { icon: Zap, value: '5', label: 'أشهر مكثفة' },
                             { icon: Target, value: '2', label: 'مبادرة لكل جهة' },
-                            { icon: Sparkles, value: '+11', label: 'مرحلة تطويرية' },
+                            { icon: Sparkles, value: '+6', label: 'مراحل تطويرية' },
                         ].map((stat, idx) => (
                             <motion.div
                                 key={idx}
                                 className="text-center group cursor-default"
                                 whileHover={{ scale: 1.05 }}
                             >
-                                <div className="flex items-center justify-center gap-2 mb-1">
-                                    <stat.icon className="w-4 h-4 text-secondary" />
-                                    <span className="text-2xl font-bold text-primary">{stat.value}</span>
+                                <div className="flex items-center justify-center gap-1.5 sm:gap-2 mb-0.5 sm:mb-1">
+                                    <stat.icon className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-secondary" />
+                                    <span className="text-xl sm:text-2xl font-bold text-primary">{stat.value}</span>
                                 </div>
-                                <span className="text-sm text-gray-500">{stat.label}</span>
+                                <span className="text-xs sm:text-sm text-gray-500">{stat.label}</span>
                             </motion.div>
                         ))}
                     </motion.div>
@@ -231,7 +232,7 @@ export function Hero() {
                             className="absolute -bottom-8 -left-4 z-20 bg-gradient-to-br from-primary to-primary/90 text-white p-5 rounded-2xl shadow-2xl shadow-primary/30 flex items-center gap-4 min-w-[220px] will-change-transform hover-card"
                         >
                             <div className="w-14 h-14 rounded-xl bg-white/20 flex items-center justify-center backdrop-blur-sm">
-                                <span className="text-white font-bold text-xl">+6</span>
+                                <span className="text-white font-bold text-xl">6</span>
                             </div>
                             <div>
                                 <span className="font-bold block text-lg">مجالات حيوية</span>

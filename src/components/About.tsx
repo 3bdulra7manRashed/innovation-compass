@@ -14,13 +14,13 @@ export function About() {
     ]
 
     const stats = [
-        { value: '+11', label: 'مرحلة تطويرية', color: 'accent' },
+        { value: '6', label: 'مراحل تطويرية', color: 'accent' },
         { value: '6', label: 'مجالات عمل', color: 'secondary' },
         { value: '2', label: 'مبادرة لكل جهة', color: 'primary' },
     ]
 
     return (
-        <section id="about" className="py-28 bg-background relative overflow-hidden" ref={ref}>
+        <section id="about" className="py-16 md:py-28 bg-background relative overflow-hidden" ref={ref}>
             {/* Background Elements */}
             <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-primary/5 to-transparent rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
             <div className="absolute bottom-0 left-0 w-80 h-80 bg-gradient-to-tr from-secondary/5 to-transparent rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
@@ -33,7 +33,7 @@ export function About() {
                     initial={{ opacity: 0, x: 50 }}
                     animate={isInView ? { opacity: 1, x: 0 } : {}}
                     transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-                    className="space-y-6 text-right"
+                    className="space-y-5 md:space-y-6 text-center md:text-right"
                 >
                     {/* Badge */}
                     <motion.div
@@ -56,7 +56,7 @@ export function About() {
                     </h2>
 
                     {/* Description */}
-                    <div className="space-y-4 text-gray-600 text-lg leading-relaxed">
+                    <div className="space-y-5 md:space-y-4 text-right text-gray-600 text-base md:text-lg leading-7 md:leading-relaxed">
                         <p>
                             بوصلة الابتكار برنامج موجه للمنظمات غير الربحية، يهدف إلى تيسير وتفعيل الابتكار بشكل عملي وسهل ومبسط، وبما يراعي الفوارق في الممكنات والقدرات بين المؤسسات من حيث الموارد، والخبرات، والبنية التنظيمية.
                         </p>
@@ -73,9 +73,9 @@ export function About() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={isInView ? { opacity: 1, y: 0 } : {}}
                         transition={{ delay: 0.5 }}
-                        className="pt-6 border-t border-gray-200/60"
+                        className="pt-8 md:pt-6 border-t border-gray-200/60"
                     >
-                        <div className="flex items-center justify-end gap-8">
+                        <div className="flex flex-wrap items-center justify-center gap-6 md:gap-8">
                             {stats.map((stat, idx) => (
                                 <motion.div
                                     key={idx}
@@ -86,7 +86,7 @@ export function About() {
                                     whileHover={{ scale: 1.05 }}
                                 >
                                     <span
-                                        className={`block text-4xl font-bold mb-1 ${stat.color === 'primary' ? 'text-[#1e1b4b]' :
+                                        className={`block text-3xl md:text-4xl font-bold mb-1 ${stat.color === 'primary' ? 'text-[#1e1b4b]' :
                                             stat.color === 'secondary' ? 'text-secondary' :
                                                 'text-accent'
                                             }`}
@@ -100,17 +100,19 @@ export function About() {
                     </motion.div>
 
                     {/* CTA Link */}
-                    <motion.a
-                        href="#impact"
-                        initial={{ opacity: 0 }}
-                        animate={isInView ? { opacity: 1 } : {}}
-                        transition={{ delay: 0.8 }}
-                        className="inline-flex items-center gap-2 text-secondary font-medium hover:gap-4 transition-all group"
-                    >
-                        <Sparkles className="w-4 h-4" />
-                        اكتشف مجالات التركيز
-                        <ArrowUpLeft className="w-4 h-4 group-hover:rotate-45 transition-transform" />
-                    </motion.a>
+                    <div className="flex justify-center pt-2">
+                        <motion.a
+                            href="#impact"
+                            initial={{ opacity: 0 }}
+                            animate={isInView ? { opacity: 1 } : {}}
+                            transition={{ delay: 0.8 }}
+                            className="inline-flex items-center gap-2 text-secondary font-medium hover:gap-4 transition-all group"
+                        >
+                            <Sparkles className="w-4 h-4" />
+                            اكتشف مجالات التركيز
+                            <ArrowUpLeft className="w-4 h-4 group-hover:rotate-45 transition-transform" />
+                        </motion.a>
+                    </div>
                 </motion.div>
 
                 {/* Visual Side - LEFT (Second in RTL) */}

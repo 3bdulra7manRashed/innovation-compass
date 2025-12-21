@@ -82,10 +82,7 @@ export function ImpactAreas() {
                                     </p>
 
                                     {/* Hover Arrow */}
-                                    <div className="mt-4 flex items-center gap-2 text-secondary opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-2 group-hover:translate-y-0">
-                                        <span className="text-sm font-medium">اعرف المزيد</span>
-                                        <ArrowUpLeft className="w-4 h-4" />
-                                    </div>
+
                                 </div>
 
                                 {/* Corner Decoration */}

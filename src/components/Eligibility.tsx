@@ -136,18 +136,23 @@ export function Eligibility() {
                                     <ArrowLeft className="w-5 h-5 group-hover:-translate-x-2 transition-transform" />
                                 </Button>
 
-                                <Button
-                                    variant="secondary"
-                                    size="lg"
-                                    className="w-full justify-between items-center group h-16 text-lg shadow-lg shadow-secondary/30"
-                                    onClick={() => window.location.href = '#'}
-                                >
-                                    <div className="flex items-center gap-3">
-                                        <FileText className="w-5 h-5" />
-                                        <span>تحميل الكراسة</span>
-                                    </div>
-                                    <ArrowLeft className="w-5 h-5 group-hover:-translate-x-2 transition-transform" />
-                                </Button>
+                                <div className="space-y-1">
+                                    <Button
+                                        variant="secondary"
+                                        size="lg"
+                                        className="w-full justify-between items-center group min-h-[64px] h-auto py-4 text-lg shadow-lg shadow-secondary/30"
+                                        onClick={() => window.open('https://drive.google.com/file/d/1WkxksNuvpkWYGe1m-ON7zi0btyfOA8NH/view?usp=sharing', '_blank')}
+                                    >
+                                        <div className="flex items-center gap-3">
+                                            <FileText className="w-5 h-5 flex-shrink-0" />
+                                            <span>عرض كراسة الشروط والمواصفات</span>
+                                        </div>
+                                        <ArrowLeft className="w-5 h-5 group-hover:-translate-x-2 transition-transform flex-shrink-0" />
+                                    </Button>
+                                    <p className="text-[11px] text-white/50 text-center px-4">
+                                        سيتم فتح الملف في نافذة جديدة (PDF)
+                                    </p>
+                                </div>
 
                                 {/* Divider */}
                                 <div className="relative py-4">
@@ -183,8 +188,8 @@ export function Eligibility() {
                                     <span className="text-xs text-white/50">جهة مهتمة</span>
                                 </div>
                                 <div>
-                                    <span className="block text-2xl font-bold text-accent">5</span>
-                                    <span className="text-xs text-white/50">أيام متبقية</span>
+                                    <span className="block text-2xl font-bold text-accent">20</span>
+                                    <span className="text-xs text-white/50">يوم متبقي</span>
                                 </div>
                                 <div>
                                     <span className="block text-2xl font-bold text-white">24/7</span>

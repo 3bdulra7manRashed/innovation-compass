@@ -221,7 +221,7 @@ export function Hero() {
                         {/* Floating Cards */}
                         <motion.div
                             animate={{ y: [0, 15, 0] }}
-                            transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+                            transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 1 }}
                             className="absolute -top-6 -right-6 z-20 glass p-5 rounded-2xl shadow-xl flex items-center gap-4 min-w-[200px] will-change-transform hover-card"
                         >
                             <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-accent/20 to-accent/40 flex items-center justify-center">
@@ -235,7 +235,7 @@ export function Hero() {
 
                         <motion.div
                             animate={{ y: [0, -12, 0] }}
-                            transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
+                            transition={{ duration: 12, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
                             className="absolute -bottom-8 -left-4 z-20 bg-gradient-to-br from-primary to-primary/90 text-white p-5 rounded-2xl shadow-2xl shadow-primary/30 flex items-center gap-4 min-w-[220px] will-change-transform hover-card"
                         >
                             <div className="w-14 h-14 rounded-xl bg-white/20 flex items-center justify-center backdrop-blur-sm">
@@ -250,12 +250,12 @@ export function Hero() {
                         {/* Decorative Elements */}
                         <motion.div
                             animate={{ rotate: [0, 180, 360] }}
-                            transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                            transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
                             className="absolute -top-12 left-8 w-8 h-8 border-2 border-secondary/30 rounded-lg"
                         />
                         <motion.div
                             animate={{ scale: [1, 1.2, 1] }}
-                            transition={{ duration: 4, repeat: Infinity }}
+                            transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
                             className="absolute bottom-16 -right-8 w-4 h-4 bg-accent/40 rounded-full"
                         />
                     </div>

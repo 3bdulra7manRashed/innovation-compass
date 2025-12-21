@@ -36,7 +36,7 @@ export function Journey() {
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     animate={isInView ? { opacity: 1, y: 0 } : {}}
-                    transition={{ duration: 0.6 }}
+                    transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
                     className="text-center mb-20"
                 >
                     <motion.span
@@ -63,7 +63,7 @@ export function Journey() {
                         <motion.div
                             initial={{ height: 0 }}
                             animate={isInView ? { height: '100%' } : {}}
-                            transition={{ duration: 2, ease: "easeOut" }}
+                            transition={{ duration: 2.5, ease: [0.22, 1, 0.36, 1] }}
                             className="w-full bg-gradient-to-b from-secondary via-primary to-accent"
                         />
                     </div>
@@ -75,7 +75,7 @@ export function Journey() {
                                 key={idx}
                                 initial={{ opacity: 0, y: 30 }}
                                 animate={isInView ? { opacity: 1, y: 0 } : {}}
-                                transition={{ delay: 0.1 + idx * 0.05, duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+                                transition={{ delay: 0.1 + idx * 0.06, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
                                 className={`relative flex items-start md:items-center ${idx % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}
                             >
                                 {/* Number Bubble */}
@@ -92,7 +92,7 @@ export function Journey() {
                                         {/* Pulse Animation */}
                                         <motion.div
                                             animate={{ scale: [1, 1.5, 1], opacity: [0.5, 0, 0.5] }}
-                                            transition={{ duration: 2, repeat: Infinity, delay: idx * 0.2 }}
+                                            transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: idx * 0.2 }}
                                             className="absolute inset-0 rounded-full border-2 border-secondary/50"
                                         />
                                     </div>

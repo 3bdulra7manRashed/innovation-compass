@@ -2,7 +2,7 @@
 import { motion, useInView } from 'framer-motion'
 import { Check, ArrowLeft, FileText, Send, Users, Calendar, Clock, Award } from 'lucide-react'
 import { Button } from './Button'
-import { useRef } from 'react'
+import { useRef, useState, useEffect } from 'react'
 
 const requirements = [
     { text: "أن تكون الجهة مرخصة رسميًا داخل المملكة العربية السعودية.", icon: Award },
@@ -15,17 +15,48 @@ export function Eligibility() {
     const ref = useRef(null)
     const isInView = useInView(ref, { once: true, margin: "-100px" })
 
+
+    const [remainingDays, setRemainingDays] = useState(0)
+
+    useEffect(() => {
+        const calculateTimeLeft = () => {
+            const difference = +new Date('2026-01-10T23:59:59+03:00') - +new Date()
+            let timeLeft = 0
+
+            if (difference > 0) {
+                timeLeft = Math.ceil(difference / (1000 * 60 * 60 * 24))
+            }
+            return timeLeft
+        }
+
+        setRemainingDays(calculateTimeLeft())
+
+        // Update check every minute to be safe, though daily is fine
+        const timer = setInterval(() => {
+            setRemainingDays(calculateTimeLeft())
+        }, 60000)
+
+        return () => clearInterval(timer)
+    }, [])
+
+    const getDayLabel = (days: number) => {
+        if (days === 1) return "يوم متبقٍ"
+        if (days === 2) return "يومان متبقيان"
+        if (days >= 3 && days <= 10) return "أيام متبقية"
+        return "يوم متبقٍ"
+    }
+
     return (
         <section className="py-28 bg-primary text-white relative overflow-hidden" ref={ref}>
-            {/* Animated Background Elements */}
+            {/* ... existing background code blocks ... */}
             <motion.div
                 animate={{ scale: [1, 1.2, 1], opacity: [0.1, 0.2, 0.1] }}
-                transition={{ duration: 10, repeat: Infinity }}
+                transition={{ duration: 15, repeat: Infinity, ease: "easeInOut" }}
                 className="absolute top-0 left-0 w-[600px] h-[600px] bg-secondary rounded-full blur-[150px] -translate-x-1/2 -translate-y-1/2"
             />
             <motion.div
                 animate={{ scale: [1.2, 1, 1.2], opacity: [0.1, 0.15, 0.1] }}
-                transition={{ duration: 12, repeat: Infinity }}
+                transition={{ duration: 18, repeat: Infinity, ease: "easeInOut" }}
                 className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-accent rounded-full blur-[150px] translate-x-1/2 translate-y-1/2"
             />
 
@@ -188,8 +219,8 @@ export function Eligibility() {
                                     <span className="text-xs text-white/50">جهة مهتمة</span>
                                 </div>
                                 <div>
-                                    <span className="block text-2xl font-bold text-accent">20</span>
-                                    <span className="text-xs text-white/50">يوم متبقي</span>
+                                    <span className="block text-2xl font-bold text-accent">{remainingDays}</span>
+                                    <span className="text-xs text-white/50">{getDayLabel(remainingDays)}</span>
                                 </div>
                                 <div>
                                     <span className="block text-2xl font-bold text-white">24/7</span>

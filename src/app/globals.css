@@ -104,6 +104,26 @@ body {
   scroll-behavior: smooth;
 }
 
+/* Ultra-smooth global transitions */
+*,
+*::before,
+*::after {
+  transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Smooth transition utility */
+.smooth-all {
+  transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* GPU Acceleration for animations */
+.will-transform {
+  will-change: transform;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transform: translate3d(0, 0, 0);
+}
+
 /* Selection styles */
 ::selection {
   background: rgba(47, 164, 169, 0.3);
@@ -178,7 +198,7 @@ body {
 
 /* Hover Card Effect */
 .hover-card {
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: all 0.6s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .hover-card:hover {
@@ -233,7 +253,7 @@ body {
   width: 0;
   height: 2px;
   background: linear-gradient(90deg, var(--color-secondary), var(--color-accent));
-  transition: width 0.3s ease;
+  transition: width 0.5s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .animated-underline:hover::after {

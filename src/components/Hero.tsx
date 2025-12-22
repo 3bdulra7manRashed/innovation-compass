@@ -5,7 +5,7 @@ import { ArrowLeft, Download, Sparkles, Zap, Target, ChevronDown, Calendar } fro
 
 export function Hero() {
     return (
-        <section id="hero" className="relative min-h-screen flex items-center justify-center pt-24 md:pt-20 pb-12 md:pb-8 overflow-hidden bg-gradient-to-b from-background via-background to-white">
+        <section id="hero" className="relative min-h-screen flex items-center justify-center pt-[94px] md:pt-20 pb-12 md:pb-8 overflow-hidden bg-gradient-to-b from-background via-background to-white">
             {/* Animated Background Elements */}
             <div className="absolute inset-0 z-0 overflow-hidden">
                 {/* Gradient Orbs */}

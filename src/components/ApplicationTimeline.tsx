@@ -63,7 +63,7 @@ export function ApplicationTimeline() {
     const isInView = useInView(ref, { once: true, margin: "-100px" })
 
     return (
-        <section className="py-20 bg-gradient-to-b from-primary to-primary/95 relative overflow-hidden" ref={ref}>
+        <section className="py-12 md:py-20 bg-gradient-to-b from-primary to-primary/95 relative overflow-hidden" ref={ref}>
             {/* Subtle Background */}
             <div className="absolute inset-0 opacity-5">
                 <div className="absolute inset-0 pattern-grid" style={{ filter: 'invert(1)' }} />

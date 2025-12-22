@@ -47,7 +47,7 @@ export function Eligibility() {
     }
 
     return (
-        <section className="py-28 bg-primary text-white relative overflow-hidden" ref={ref}>
+        <section className="py-16 md:py-28 bg-primary text-white relative overflow-hidden" ref={ref}>
             {/* ... existing background code blocks ... */}
             <motion.div
                 animate={{ scale: [1, 1.2, 1], opacity: [0.1, 0.2, 0.1] }}
@@ -85,7 +85,7 @@ export function Eligibility() {
                     className="space-y-8"
                 >
                     {/* Section Header */}
-                    <div>
+                    <div className="text-center lg:text-start">
                         <motion.span
                             initial={{ opacity: 0, y: 10 }}
                             animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -186,13 +186,11 @@ export function Eligibility() {
                                 </div>
 
                                 {/* Divider */}
-                                <div className="relative py-4">
-                                    <div className="absolute inset-0 flex items-center">
-                                        <div className="w-full border-t border-white/10" />
-                                    </div>
-                                    <div className="relative flex justify-center">
-                                        <span className="px-4 bg-transparent text-sm text-white/40">هل لديك استفسار؟</span>
-                                    </div>
+                                <div className="py-4 lg:py-5">
+                                    <div className="w-full border-t border-white/10" />
+                                    <p className="mt-4 lg:mt-5 text-center text-sm font-medium text-white/50">
+                                        هل لديك استفسار؟
+                                    </p>
                                 </div>
 
                                 <Button

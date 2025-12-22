@@ -30,7 +30,7 @@ export function Journey() {
     const isInView = useInView(ref, { once: true, margin: "-100px" })
 
     return (
-        <section id="journey" className="py-28 bg-gradient-to-b from-white via-background/50 to-background overflow-hidden" ref={ref}>
+        <section id="journey" className="py-20 md:py-28 bg-gradient-to-b from-white via-background/50 to-background overflow-hidden" ref={ref}>
             <div className="container max-w-7xl mx-auto px-6 lg:px-8">
                 {/* Section Header */}
                 <motion.div

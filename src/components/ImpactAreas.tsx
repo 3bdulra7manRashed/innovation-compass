@@ -17,7 +17,7 @@ export function ImpactAreas() {
     const isInView = useInView(ref, { once: true, margin: "-100px" })
 
     return (
-        <section id="impact" className="py-28 bg-white relative overflow-hidden" ref={ref}>
+        <section id="impact" className="py-20 md:py-28 bg-white relative overflow-hidden" ref={ref}>
             {/* Background Pattern */}
             <div className="absolute inset-0 pattern-grid opacity-30" />
             <div className="absolute top-20 left-20 w-72 h-72 bg-secondary/5 rounded-full blur-3xl" />

@@ -15,7 +15,12 @@ const quickLinks = [
 const contactInfo = [
     { icon: Phone, label: '011 236 2606', href: 'tel:0112362606', dir: 'ltr' as const },
     { icon: Mail, label: 'info@ajch.org.sa', href: 'mailto:info@ajch.org.sa', dir: undefined },
-    { icon: MapPin, label: 'الرياض،\nالمملكة العربية السعودية', href: undefined, dir: undefined },
+    {
+        icon: MapPin,
+        label: <span className="lg:whitespace-nowrap">الرياض،<br className="block lg:hidden" /> المملكة العربية السعودية</span>,
+        href: undefined,
+        dir: undefined
+    },
 ]
 
 const socialLinks = [
@@ -138,7 +143,7 @@ export function Footer() {
                                             <div className="w-8 h-8 rounded-lg bg-white/5 group-hover:bg-secondary/20 flex items-center justify-center text-secondary transition-all duration-300 flex-shrink-0 mt-[-4px]">
                                                 <item.icon className="w-4 h-4" />
                                             </div>
-                                            <span className="text-sm leading-6 whitespace-pre-line" dir={item.dir}>{item.label}</span>
+                                            <span className="text-sm leading-6" dir={item.dir}>{item.label}</span>
                                         </Wrapper>
                                     </li>
                                 )

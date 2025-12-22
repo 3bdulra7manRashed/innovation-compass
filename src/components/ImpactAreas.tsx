@@ -9,7 +9,7 @@ const areas = [
     { title: "إدارة الذات وتحمل المسؤولية", icon: UserCheck, desc: "إعداد برامج تمكّن الشباب من تحمل المسؤوليات الشخصية، والأسرية والمجتمعية بوعي وكفاءة.", color: "from-primary/15 to-primary/5" },
     { title: "حل المشكلات واتخاذ القرار", icon: Lightbulb, desc: "تنمية مهارات التفكير والتحليل واتخاذ القرار لدى الشباب، والحد من القرارات غير المدروسة.", color: "from-secondary-accent/20 to-secondary-accent/5" },
     { title: "تعزيز الشخصية السعودية", icon: Flag, desc: "مبادرات تُبرز الشخصية الوطنية، وتُعزز الاعتزاز بالقيم والثقافة السعودية لدى النشء والشباب.", color: "from-accent/20 to-accent/5" },
-    { title: "تمكين المتخصصين والخبراء", icon: Briefcase, desc: "تطوير قدرات العاملين في مجالات الشباب والطفولة، وبناء شبكات تشاركية لتبادل الخبرات.", color: "from-secondary/20 to-secondary/5" },
+    { title: "تفعيل المتخصصين والخبراء", icon: Briefcase, desc: "تطوير قدرات العاملين في مجالات الشباب والطفولة، وبناء شبكات تشاركية لتبادل الخبرات.", color: "from-secondary/20 to-secondary/5" },
 ]
 
 export function ImpactAreas() {

@@ -69,6 +69,9 @@ export function Hero() {
                 >
                     {/* Main Heading */}
                     <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-primary leading-tight mb-5 md:mb-4 text-shadow-sm">
+                        <span className="block text-lg md:text-2xl text-secondary font-medium mb-2 tracking-wide">
+                            مبادرة بوصلة الابتكار
+                        </span>
                         فرصة للجهات المتخصصة في مجال{' '}
                         <span className="relative inline-block">
                             <span className="gradient-text">الطفولة والشباب</span>
@@ -98,7 +101,7 @@ export function Hero() {
                         transition={{ delay: 0.5, duration: 0.6 }}
                         className="text-[1.0625rem] md:text-lg text-gray-600 mb-5 md:mb-6 leading-7 md:leading-relaxed max-w-2xl"
                     >
-                        للشراكة في ابتكار مبادرات نوعية ضمن مبادرة بوصلة الابتكار، لتمكين الجهات من صناعة الأثر المستدام وبناء حلول مبتكرة.
+                        البرنامج الأول من نوعه لتمكين المنظمات غير الربحية من ابتكار حلول مستدامة. انضم إلينا في رحلة لصناعة الأثر في قطاع الطفولة والشباب.
                     </motion.p>
 
                     {/* CTA Buttons */}

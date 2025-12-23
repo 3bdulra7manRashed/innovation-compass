@@ -1,7 +1,7 @@
 'use client'
 import { motion } from 'framer-motion'
 import { Button } from './Button'
-import { ArrowLeft, Download, Sparkles, Zap, Target, ChevronDown, Calendar } from 'lucide-react'
+import { ArrowLeft, Download, Sparkles, Zap, Target, ChevronDown, Calendar, FileText } from 'lucide-react'
 
 export function Hero() {
     return (
@@ -109,26 +109,34 @@ export function Hero() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.7, duration: 0.6 }}
-                        className="flex flex-col sm:flex-row flex-wrap gap-3"
+                        className="flex flex-col sm:flex-row gap-4 items-center sm:items-start justify-center sm:justify-start w-full"
                     >
+                        {/* Primary CTA */}
                         <Button
                             size="lg"
                             variant="primary"
-                            className="w-full sm:w-auto gap-3 shadow-2xl shadow-primary/30 hover:shadow-primary/40 group btn-ripple shine-effect"
-                            onClick={() => window.open('https://forms.gle/dJ4HNw8MX6RkEd8E6', '_blank')}
-                        >
-                            الاشتراك في المبادرة
-                            <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform" />
-                        </Button>
-                        <Button
-                            size="lg"
-                            variant="outline"
-                            className="w-full sm:w-auto gap-3 hover:border-secondary hover:text-secondary group"
+                            className="w-full sm:w-auto sm:min-w-[260px] h-14 justify-center gap-3 shadow-2xl shadow-primary/30 hover:shadow-primary/40 group btn-ripple shine-effect"
                             onClick={() => window.open('https://forms.gle/ZPztq9DvitrEXgnp8', '_blank')}
                         >
-                            <Calendar className="w-5 h-5 group-hover:animate-bounce" />
                             التسجيل في اللقاء التعريفي
+                            <Calendar className="w-5 h-5 shrink-0 group-hover:-translate-x-1 transition-transform" />
                         </Button>
+
+                        {/* Secondary CTA */}
+                        <div className="flex flex-col w-full sm:w-auto items-center">
+                            <Button
+                                size="lg"
+                                variant="outline"
+                                className="w-full sm:w-auto sm:min-w-[260px] h-14 justify-center gap-3 hover:border-secondary hover:text-secondary group"
+                                onClick={() => window.open('https://drive.google.com/file/d/1H8WR4F7a7Rv3s3GvXPpAVaEey8SZarCe/view?usp=sharing', '_blank')}
+                            >
+                                عرض كراسة الشروط والمواصفات
+                                <FileText className="w-5 h-5 shrink-0 group-hover:scale-110 transition-transform" />
+                            </Button>
+                            <span className="text-[11px] text-gray-400 font-medium text-center mt-2 tracking-wide">
+                                (PDF – يُفتح في نافذة جديدة)
+                            </span>
+                        </div>
                     </motion.div>
 
                     {/* Quick Stats */}

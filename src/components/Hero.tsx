@@ -115,7 +115,7 @@ export function Hero() {
                         <Button
                             size="lg"
                             variant="primary"
-                            className="w-full sm:w-auto sm:min-w-[260px] h-14 justify-center gap-3 shadow-2xl shadow-primary/30 hover:shadow-primary/40 group btn-ripple shine-effect"
+                            className="w-full sm:w-auto sm:min-w-[260px] h-14 justify-center gap-3 shadow-2xl shadow-primary/30 hover:shadow-primary/40 group btn-ripple shine-effect sm:whitespace-nowrap"
                             onClick={() => window.open('https://forms.gle/ZPztq9DvitrEXgnp8', '_blank')}
                         >
                             التسجيل في اللقاء التعريفي
@@ -127,10 +127,10 @@ export function Hero() {
                             <Button
                                 size="lg"
                                 variant="outline"
-                                className="w-full sm:w-auto sm:min-w-[260px] h-14 justify-center gap-3 hover:border-secondary hover:text-secondary group"
+                                className="w-full sm:w-auto sm:min-w-[260px] h-14 justify-center gap-3 hover:border-secondary hover:text-secondary group sm:whitespace-nowrap"
                                 onClick={() => window.open('https://drive.google.com/file/d/1H8WR4F7a7Rv3s3GvXPpAVaEey8SZarCe/view?usp=sharing', '_blank')}
                             >
-                                عرض كراسة الشروط والمواصفات
+                                كراسة الشروط والمواصفات
                                 <FileText className="w-5 h-5 shrink-0 group-hover:scale-110 transition-transform" />
                             </Button>
                             <span className="text-[11px] text-gray-400 font-medium text-center mt-2 tracking-wide">

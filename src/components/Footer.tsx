@@ -84,7 +84,7 @@ export function Footer() {
 
                         {/* 2. Initiative Description (Second - Below Logos) */}
                         <p className="text-white text-base font-semibold leading-8 max-w-lg text-right">
-                            مبادرة نوعية لتمكين القطاع غير الربحي في مجال الطفولة والشباب،<br /> لصناعة حراك ابتكاري مستدام.
+                            مبادرة نوعية لتمكين الجهات في مجال الطفولة والشباب،<br /> لصناعة حراك ابتكاري مستدام.
                         </p>
                     </div>
 

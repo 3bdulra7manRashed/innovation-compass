@@ -101,7 +101,7 @@ export function Hero() {
                         transition={{ delay: 0.5, duration: 0.6 }}
                         className="text-[1.0625rem] md:text-lg text-gray-600 mb-5 md:mb-6 leading-7 md:leading-relaxed max-w-2xl"
                     >
-                        البرنامج الأول من نوعه لتمكين المنظمات غير الربحية من ابتكار حلول مستدامة. انضم إلينا في رحلة لصناعة الأثر في قطاع الطفولة والشباب.
+                        البرنامج الأول من نوعه لتمكين الجهات من ابتكار حلول مستدامة. انضم إلينا في رحلة لصناعة الأثر في قطاع الطفولة والشباب.
                     </motion.p>
 
                     {/* CTA Buttons */}
